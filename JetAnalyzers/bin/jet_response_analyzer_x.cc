@@ -17,7 +17,6 @@
 //                       Philipp Schieferdecker <philipp.schieferdecker@cern.ch>
 ////////////////////////////////////////////////////////////////////////////////
 
-
 #include "JetMETAnalysis/JetUtilities/interface/CommandLine.h"
 #include "JetMETAnalysis/JetUtilities/interface/JRAEvent.h"
 #include "PhysicsTools/Utilities/interface/LumiReWeighting.h"
@@ -45,7 +44,7 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////////////
 // define local functions
 ////////////////////////////////////////////////////////////////////////////////
-//cout << "1" << endl;
+
 /// get the suffix for the histogram name, e.g. JetPt100to150
 string get_suffix(const string& varname,int ibin,const vector<float>& bins);
 
@@ -668,6 +667,9 @@ int main(int argc,char**argv)
 	
 	
       }
+    }
+    else {
+      cout << "check number of bins in pt" << endl;
     }
     
     // book eta histograms

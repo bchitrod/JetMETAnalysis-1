@@ -287,7 +287,7 @@ int fit_dscb(TH1F*& hrsp,
   int pos2     = histname.find("to",pos1);
   string ss    = histname.substr(pos1+5,pos2);
   if (from_string(ptRefMax,ss,std::dec)) {
-    if (histname.find("RelRsp")==0)
+    if (histname.find("RelRsp")==0 && ptRefMax!=0)
       rspMax = jtptmin/ptRefMax;
     if (histname.find("AbsRsp")==0)
       rspMax = jtptmin-ptRefMax;
@@ -462,7 +462,7 @@ void fit_gaussian(TH1F*& hrsp,
   int pos2     = histname.find("to",pos1);
   string ss    = histname.substr(pos1+5,pos2);
   if (from_string(ptRefMax,ss,std::dec)) {
-    if (histname.find("RelRsp")==0)
+    if (histname.find("RelRsp")==0 && ptRefMax!=0)
       rspMax = jtptmin/ptRefMax;
     if (histname.find("AbsRsp")==0)
       rspMax = jtptmin-ptRefMax;
